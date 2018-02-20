@@ -8,7 +8,7 @@ public class Disco {
 	private double perimetroExterior;
 	private double superficie;
 
-	public Disco(double radioI, double radioE) {
+	public Disco(Integer radioI, Integer radioE) {
 
 		radioInterior = radioI;
 		radioExterior = radioE;
@@ -20,7 +20,7 @@ public class Disco {
 	}
 
 	
-	public void cambiarElRadioInterior(double radioI) {
+	public void cambiarElRadioInterior(Integer radioI) {
 		this.radioInterior = radioI;
 		this.perimetroInterior = radioI * 2 * 3.14;
 		this.superficie = 3.14 * (this.radioExterior * this.radioExterior - radioI * radioI);
@@ -28,11 +28,16 @@ public class Disco {
 	}
 
 	
-	public void cambiarElRadioExterior(double radioE) {
+	public void cambiarElRadioExterior(Integer radioE) {
 		this.radioExterior = radioE;
 		this.perimetroExterior = radioE * 2 * 3.14;
 		this.superficie = 3.14 * (radioE * radioE - this.radioInterior * this.radioInterior);
 
 	}
-
+	public double mostrarRadioInterior() {
+		return this.radioInterior;
+	}
+	public Integer mostrarRadioExterior() {
+		return (int) this.radioExterior;
+	}
 }
